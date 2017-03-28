@@ -1,12 +1,8 @@
 {
-  "name": "Empty Frontend Template",
-  "version": "0.0.2",
-  "description": "Empty Frontend Template",
+  "name": "Unique Cars Admin Template",
+  "version": "0.0.1",
+  "description": "Unique Cars Admin Template",
   "author": "Sefa Tunçkanat <sefatunckanat73@gmail.com> (https://sefatunckanat.github.io)",
-  "repository": {
-    "type" : "git",
-    "url" : "https://github.com/sefatunckanat/empty-frontend-template.git"
-  },
   "dependencies": {
     "browser-sync": ">=2.18.8",
     "gulp": ">=3.9.1",
