@@ -196,7 +196,11 @@ input[type="button"],input[type="submit"]
       margin-left: -40px
       top: 100%
       @extend .colorBG
-
+.dataTables_wrapper
+  padding: 10px
+  color: #333
+  input
+    outline: none
 
 /* Cards */
 .card
@@ -569,13 +573,14 @@ input[type="button"],input[type="submit"]
       user-select: none
     &:hover
       background: darken($primary,5%)
-      margin-top: 5px
+      margin-right: 5px
       cursor: pointer
       box-shadow: 0 0 1px rgba(#000,0.3)
   .visible
     overflow: hidden
     position: absolute
     right: 60px
+    top: -5px
     box-shadow: 0 0 1px rgba(#000,0.3)
     .content
       transition: 0.2s

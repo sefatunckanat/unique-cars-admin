@@ -1,6 +1,26 @@
 $(function(){
     $('img').on('dragstart', function(event) { event.preventDefault(); });
     $('.selectize').selectize();
+    $('.datatables').DataTable({
+        dom: 'Bfrtip',
+        responsive: true,
+        "aaSorting": [],
+        "language":{
+            "sInfo":"_TOTAL_ sonuçtan _START_ ile _END_ arası gösteriliyor.",
+            "sSearch":"Arama :",
+            "sZeroRecords":"Eşleşen veri bulunamadı.",
+            "sLengthMenu":"_MENU_ veri gösteriliyor",
+            "infoEmpty": "Hiçbir veri bulunamadı.",
+            "infoFiltered":   "(_MAX_ adet veri içerinde)",
+            "paginate":{
+                "first":"İlk",
+                "last":"Son",
+                "next":"İleri",
+                "previous":"Önceki"
+            }
+        }
+    });
+
     $('textarea').froalaEditor({
         placeholderText: '',
         toolbarButtons:['undo','redo','|','bold','italic','underline','|','fontFamily',

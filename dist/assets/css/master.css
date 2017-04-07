@@ -225,6 +225,12 @@ ul, li, a {
     margin-left: -40px;
     top: 100%; }
 
+.dataTables_wrapper {
+  padding: 10px;
+  color: #333; }
+  .dataTables_wrapper input {
+    outline: none; }
+
 /* Cards */
 .card {
   border: 1px solid #e3e3e3;
@@ -669,7 +675,7 @@ ul, li, a {
       user-select: none; }
     .notification .toggle:hover {
       background: #3097ac;
-      margin-top: 5px;
+      margin-right: 5px;
       cursor: pointer;
       -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
       -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
@@ -678,6 +684,7 @@ ul, li, a {
     overflow: hidden;
     position: absolute;
     right: 60px;
+    top: -5px;
     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3); }
