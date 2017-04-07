@@ -45,15 +45,20 @@ $(function(){
     });
 
     $(window).resize(function() {
-        if($(window).width()<820){
-            $(".sidebar").addClass("small");
-            $(".mainPanel").addClass("wide");
-            $(".sidebar .profile .toggle").addClass("active");
-        }else{
-            $(".sidebar").removeClass("small");
-            $(".mainPanel").removeClass("wide");
-            $(".sidebar .profile .toggle").removeClass("active");
-        }
+        Resize();
     });
+    Resize();    
 });
+
+function Resize(){
+    if($(window).width()<820){
+        $(".sidebar").addClass("small");
+        $(".mainPanel").addClass("wide");
+        $(".sidebar .profile .toggle").addClass("active");
+    }else{
+        $(".sidebar").removeClass("small");
+        $(".mainPanel").removeClass("wide");
+        $(".sidebar .profile .toggle").removeClass("active");
+    }
+}
 

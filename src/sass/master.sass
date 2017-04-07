@@ -29,15 +29,17 @@ ul,li,a
 $sidebarNormalWidth: 300px
 $sidebarSmallWidth: 64px
 $animationTime: 0.5s
+$cardRadius: 3px
 
 /* Colors */
 $success: #54c085
 $primary: #36a9c0
 $danger: #9c3b49
-$warning: #c1c075
+$warning: #EAA21E
 $reverse: #6c6c6c
 $cardBG: #fcfcfc
 $cardColor: #333
+
 .colorBG
   &.primary
     background: $primary
@@ -197,17 +199,62 @@ input[type="button"],input[type="submit"]
 
 /* Cards */
 .card
-  border: 1px solid darken($cardBG,5%)
-  border-radius: 1px
+  border: 1px solid darken($cardBG,10%)
+  &.primary
+    border: 1px solid darken($primary,10%)
+    .head
+      border-bottom: 1px solid darken($primary,10%)
+      background: $primary
+      color: #fff
+  &.success
+    border: 1px solid darken($success,10%)
+    .head
+      border-bottom: 1px solid darken($success,10%)
+      background: $success
+      color: #fff
+  &.danger
+    border: 1px solid darken($danger,10%)
+    .head
+      border-bottom: 1px solid darken($danger,10%)
+      background: $danger
+      color: #fff
+  &.warning
+    border: 1px solid darken($warning,10%)
+    .head
+      border-bottom: 1px solid darken($warning,10%)
+      background: $warning
+      color: #fff
+  &.reverse
+    border: 1px solid darken($reverse,10%)
+    .head
+      border-bottom: 1px solid darken($reverse,10%)
+      background: $reverse
+      color: #fff
+
+  border-radius: $cardRadius
   background: $cardBG
   overflow: hidden
   position: relative
   color: $cardColor
   margin-bottom: 20px
   .head
-    border-bottom: 1px solid darken($cardBG,5%)
+    border-bottom: 1px solid darken($cardBG,10%)
     padding: 5px
     position: relative
+    background: darken($cardBG,10%)
+    .icon
+      padding-left: 10px
+      i.fa
+        font-size: 60px
+    .detail
+      line-height: 24px
+      padding-right: 10px
+      p
+        margin: 0
+        color: unset
+        font-size: 30px
+      span
+        font-size: 0.86em
     p
       color: darken($cardColor,10%)
       font-weight: bold
@@ -229,7 +276,30 @@ input[type="button"],input[type="submit"]
       padding: 10px
     &.huge
       padding: 20px
-
+  .bottom
+    padding: 10px 5px
+    position: relative
+    background: darken($cardBG,5%)
+    color: lighten($cardColor,5%)
+    transition: $animationTime
+    font-size: 0.86em
+    border-top: 1px solid darken($cardBG,10%)
+    i.fa
+      margin-right: 10px
+      transition: $animationTime
+    &:hover
+      background: darken($cardBG,10%)
+      cursor: pointer
+      i.fa
+        margin-right: 0
+    .right
+      float: right
+    &.small
+      padding: 10px 7px
+    &.big
+      padding: 10px
+    &.huge
+      padding: 20px
 
 /* Theme */
 .wrapper
@@ -435,27 +505,38 @@ input[type="button"],input[type="submit"]
         cursor: pointer
 
 .mainPanel
-  padding: 20px
   transition: $animationTime
   width: calc( 100% - #{$sidebarNormalWidth} )
   margin-left: $sidebarNormalWidth
   &.wide
     width: calc( 100% - #{$sidebarSmallWidth} )
     margin-left: $sidebarSmallWidth
+  .inner
+    padding: 20px
+
+  .header
+    background: $cardBG
+    padding: 20px
+    color: #444
+    border-bottom: 1px solid rgba(#000,0.2)
+    i.fa
+      margin-right: 10px
+      font-size: 20px
 
 .notification
   position: fixed
-  top: 20px
-  right: 20px
-  overflow: hidden
-  min-height: 55px
+  top: 15px
+  right: 15px
+  height: 50px
+  width: 50px
   .toggle
     display: inline-block
     width: 50px
     height: 50px
-    right: 0
-    background: $primary
-    border: 1px solid darken($primary,5%)
+    right: -10px
+    top: -10px
+    background: darken($primary,10%)
+    border: 1px solid darken($primary,20%)
     border-radius: 25px
     color: #fff
     text-align: center
@@ -479,30 +560,47 @@ input[type="button"],input[type="submit"]
       background: darken($primary,5%)
       margin-top: 5px
       cursor: pointer
-
-  .content
-    transition: 0.2s
-    width: 0
-    margin-right: 60px
+      box-shadow: 0 0 1px rgba(#000,0.3)
+  .visible
     overflow: hidden
-    &.active
-      width: 300px
-    .inner
-      background: $cardBG
-      border: 1px solid darken($cardBG,5%)
-      border-radius: 1px
-      .head
+    position: absolute
+    right: 60px
+    box-shadow: 0 0 1px rgba(#000,0.3)
+    .content
+      transition: 0.2s
+      width: 0
+      overflow: hidden
+      position: relative
+      &.active
         width: 300px
-        font-weight: bold
-        padding: 10px
-        background: darken($cardBG,5%)
-        color: #444
-      .list
-        width: 300px
-        color: #333
-        padding: 10px
+      .inner
+        background: $cardBG
+        border: 1px solid darken($cardBG,5%)
+        border-radius: $cardRadius
+        .head
+          width: 100%
+          font-weight: bold
+          padding: 10px
+          background: darken($cardBG,5%)
+          color: #444
+        .list
+          width: 100%
+          min-width: 300px
+          color: #333
+          padding: 10px
+          font-size: 13px
+          line-height: 1.7em
 
 /* Responsive */
 @media screen and (max-width: 640px)
   .mainPanel
     width: 100%
+  .notification
+    .visible
+      top: 60px
+      right: 0
+      .content.active
+        width: 90vw
+
+
+
