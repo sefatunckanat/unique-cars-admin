@@ -512,7 +512,8 @@ ul, li, a {
         right: 0; }
   .sidebar .menu {
     margin: 10px 0 10px;
-    min-height: 300px;
+    overflow-y: scroll;
+    max-height: 50vh;
     padding: 20px; }
     .sidebar .menu .item {
       position: relative;
@@ -607,13 +608,19 @@ ul, li, a {
   .mainPanel .inner {
     padding: 20px; }
   .mainPanel .header {
-    background: #fcfcfc;
+    background: #efefef;
     padding: 20px;
     color: #444;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
     .mainPanel .header i.fa {
       margin-right: 10px;
       font-size: 20px; }
+  .mainPanel .subheader {
+    font-weight: bold;
+    padding: 10px;
+    color: #444;
+    margin: 0 0 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
 
 .notification {
   position: fixed;

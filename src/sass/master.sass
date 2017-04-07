@@ -304,6 +304,7 @@ input[type="button"],input[type="submit"]
 /* Theme */
 .wrapper
   overflow: hidden
+
 .sidebar
   display: inline-block
   float: left
@@ -437,9 +438,11 @@ input[type="button"],input[type="submit"]
         float: unset
         text-align: center
         right: 0
+  
   .menu
     margin: 10px 0 10px
-    min-height: 300px
+    overflow-y: scroll
+    max-height: 50vh
     padding: 20px
     .item
       position: relative
@@ -515,13 +518,19 @@ input[type="button"],input[type="submit"]
     padding: 20px
 
   .header
-    background: $cardBG
+    background: darken($cardBG,5%)
     padding: 20px
     color: #444
     border-bottom: 1px solid rgba(#000,0.2)
     i.fa
       margin-right: 10px
       font-size: 20px
+  .subheader
+    font-weight: bold
+    padding: 10px
+    color: #444
+    margin: 0 0 10px
+    border-bottom: 1px solid rgba(#000,0.2)
 
 .notification
   position: fixed
