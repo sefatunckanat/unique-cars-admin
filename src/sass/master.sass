@@ -23,8 +23,6 @@ ul,li,a
   position: relative
   overflow: hidden
 
-
-
 /* Variables */
 $sidebarNormalWidth: 300px
 $sidebarSmallWidth: 64px
@@ -199,8 +197,95 @@ input[type="button"],input[type="submit"]
 .dataTables_wrapper
   padding: 10px
   color: #333
-  input
+  thead th
+      border-bottom: 1px solid rgba(#000,0.2)!important
+  .no-footer
+    border-bottom: 1px solid rgba(#000,0.2)!important
+  .dataTables_paginate
+    .paginate_button 
+      border: 0
+      border-bottom: 1px solid rgba(#000,0.1)
+      outline: none
+      padding: 10px
+      color: #444
+      font-size: 14px
+      transition: 0.2s
+      background: #fff!important
+      margin: 0 3px
+      color: #333!important
+      &:hover
+        border: 0!important
+        border-bottom: 1px solid rgba(#000,0.2)!important
+        background: #eee!important
+        color: #333!important
+      &:active,&:focus
+        border: 0!important
+        border-bottom: 1px solid rgba(#000,0.3)!important
+        color: #333!important
+      &.current
+        border: 0!important
+        background: #efefef!important
+        border-bottom: 1px solid rgba(#000,0.2)!important
+      &.disabled
+        border: 0!important
+        background: #efefef!important
+        color: #aaa!important
+      
+
+  input[type="search"]
+    border: 0
+    border-bottom: 1px solid rgba(#000,0.1)
     outline: none
+    padding: 10px
+    color: #444
+    font-size: 14px
+    transition: 0.2s
+    &:hover
+      border-bottom: 1px solid rgba(#000,0.2)
+    &:active,&:focus
+      border-bottom: 1px solid rgba(#000,0.3)
+    
+
+/* pace.js */
+.pace
+  -webkit-pointer-events: none
+  pointer-events: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  user-select: none
+  z-index: 99999
+  position: fixed
+  margin: auto
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: rgba(255,255,255,1)
+  transition: 0.5s
+  text-align: center
+  overflow: hidden
+  .pace-progress
+    position: fixed
+    z-index: 2000
+    display: block
+    position: absolute
+    top: 50%
+    left: 50%
+    height: 30px
+    margin-left: -100px
+    width: 200px
+    font-size: 20px
+    color: #7C7C7C
+    font-weight: 100
+    text-align: center
+    transform: unset!important
+    &:after
+      content: attr(data-progress-text)
+      display: block
+  &.pace-inactive
+    background: rgba(#000,0)
+    .pace-progress
+      display: none
 
 /* Cards */
 .card

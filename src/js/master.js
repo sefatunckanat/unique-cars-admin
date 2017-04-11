@@ -11,7 +11,7 @@ $(function(){
             "sZeroRecords":"Eşleşen veri bulunamadı.",
             "sLengthMenu":"_MENU_ veri gösteriliyor",
             "infoEmpty": "Hiçbir veri bulunamadı.",
-            "infoFiltered":   "(_MAX_ adet veri içerinde)",
+            "infoFiltered":   "(_MAX_ adet veri içerisinde)",
             "paginate":{
                 "first":"İlk",
                 "last":"Son",

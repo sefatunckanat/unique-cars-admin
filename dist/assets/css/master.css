@@ -228,8 +228,105 @@ ul, li, a {
 .dataTables_wrapper {
   padding: 10px;
   color: #333; }
-  .dataTables_wrapper input {
-    outline: none; }
+  .dataTables_wrapper thead th {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important; }
+  .dataTables_wrapper .no-footer {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important; }
+  .dataTables_wrapper .dataTables_paginate .paginate_button {
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    padding: 10px;
+    color: #444;
+    font-size: 14px;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    -moz-transition: 0.2s;
+    transition: 0.2s;
+    background: #fff !important;
+    margin: 0 3px;
+    color: #333 !important; }
+    .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+      border: 0 !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+      background: #eee !important;
+      color: #333 !important; }
+    .dataTables_wrapper .dataTables_paginate .paginate_button:active, .dataTables_wrapper .dataTables_paginate .paginate_button:focus {
+      border: 0 !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
+      color: #333 !important; }
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+      border: 0 !important;
+      background: #efefef !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important; }
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+      border: 0 !important;
+      background: #efefef !important;
+      color: #aaa !important; }
+  .dataTables_wrapper input[type="search"] {
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    padding: 10px;
+    color: #444;
+    font-size: 14px;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    -moz-transition: 0.2s;
+    transition: 0.2s; }
+    .dataTables_wrapper input[type="search"]:hover {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+    .dataTables_wrapper input[type="search"]:active, .dataTables_wrapper input[type="search"]:focus {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+
+/* pace.js */
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 99999;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+  overflow: hidden; }
+  .pace .pace-progress {
+    position: fixed;
+    z-index: 2000;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30px;
+    margin-left: -100px;
+    width: 200px;
+    font-size: 20px;
+    color: #7C7C7C;
+    font-weight: 100;
+    text-align: center;
+    -webkit-transform: unset !important;
+    -moz-transform: unset !important;
+    -ms-transform: unset !important;
+    -o-transform: unset !important;
+    transform: unset !important; }
+    .pace .pace-progress:after {
+      content: attr(data-progress-text);
+      display: block; }
+  .pace.pace-inactive {
+    background: transparent; }
+    .pace.pace-inactive .pace-progress {
+      display: none; }
 
 /* Cards */
 .card {
